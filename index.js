@@ -193,7 +193,7 @@ if (!fs.existsSync(videosDir)) {
 
 
 
-const token = process.env.TELEGRAM_BOT_TOKEN; // استخدم المتغير البيئي للتوكن
+const token = process.env.TOKEN; // استخدم المتغير البيئي للتوكن
 const bot = new TelegramBot(token, { polling: true });
 
 // باقي الكود
